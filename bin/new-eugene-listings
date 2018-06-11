@@ -2,4 +2,4 @@
 
 require './lib/environment.rb'
 
-EugeneListing::CLI.new.call
+NewEugeneListingCli::CLI.new.call
