@@ -13,14 +13,19 @@ class NewEugeneListingCli::CLI
   end
 
   def menu
-    puts  "Please enter the number of the property you would like to see more information about:"
-    input = gets.strip.downcase
-    if input == "1"
-      puts "More details about Example Address 1"
-    elsif input == "2"
-      puts "More details about Example Address 2"
-    else
-      "I'm sorry, I don't understand. Please enter the number of the property you would like to see more information about:"
+    input = nil
+    while input != "exit"
+      puts  "Please enter the number of the property you would like to see more information about or 'listings' to see the listings again or 'exit':"
+      input = gets.strip.downcase
+      if input == 'listings'
+        listings
+      elsif input == "1"
+        puts "More details about Example Address 1"
+      elsif input == "2"
+        puts "More details about Example Address 2"
+      else
+        "I'm sorry, I don't understand. Please enter the number of the property you would like to see more information about:"
+      end
     end
   end
 
