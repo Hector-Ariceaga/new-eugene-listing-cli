@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-require './lib/environment.rb'
+require './config/environment.rb'
 
 NewEugeneListingCli::CLI.new.call

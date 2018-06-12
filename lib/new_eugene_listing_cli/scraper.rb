@@ -1,0 +1,3 @@
+class NewEugeneListingCli::Scraper
+
+end
