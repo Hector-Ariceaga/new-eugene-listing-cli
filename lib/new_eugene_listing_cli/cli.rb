@@ -11,7 +11,7 @@ class NewEugeneListingCli::CLI
     puts "The following are property listings in Eugene that are less than 24 hours old:"
     @all = NewEugeneListingCli::Listing.all
     @all.each.with_index(1) do |listing, i|
-      puts "#{i}. #{listing.address} -- $#{listing.price} -- #{listing.bedrooms}bd -- #{listing.bathrooms}ba"
+      puts "#{i}. #{listing.address.strip} -- #{listing.price} -- #{listing.bedrooms}bd -- #{listing.bathrooms}ba"
     end
   end
 
