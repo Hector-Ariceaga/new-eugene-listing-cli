@@ -1,7 +1,4 @@
-
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "new_eugene_listing_cli/version"
+require_relative "./lib/new_eugene_listing_cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "new_eugene_listing_cli"
@@ -25,15 +22,15 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = ["lib/environment.rb", "lib/new_eugene_listing_cli/cli.rb", "lib/new_eugene_listing_cli/listing.rb", "lib/new_eugene_listing_cli/scraper.rb"]
+  spec.files         = ["config/environment.rb", "lib/new_eugene_listing_cli/cli.rb", "lib/new_eugene_listing_cli/listing.rb", "lib/new_eugene_listing_cli/scraper.rb"]
   spec.bindir        = "exe"
-  spec.executables   = [spec.files.grep(%r{^exe/}) { |f| File.basename(f) }]
-  spec.require_paths = ["lib"]
+  spec.executables   = ["new-eugene-listings"]
+  spec.require_paths = ["lib", "lib/new-eugene-listings"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "nokogiri"
+  spec.add_development_dependency "open-uri"
   spec.add_development_dependency "pry"
-
-  spec.add_dependency "nokogiri"
 end

@@ -1,16 +1,11 @@
 class NewEugeneListingCli::CLI
 
   def call
-    stub_data
+    NewEugeneListingCli::Scraper.new.build_properties
     display_listings
     menu
     close
   end
-
-  def stub_data
-    NewEugeneListingCli::Listing.stub
-  end
-
 
   def display_listings
     puts "The following are property listings in Eugene that are less than 24 hours old:"
