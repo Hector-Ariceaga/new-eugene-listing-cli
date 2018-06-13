@@ -1,8 +1,6 @@
 # NewEugeneListingCli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/new_eugene_listing_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a Ruby Gem that provides a CLI to view the newest property listings (less than 24 hours old) in Eugene, Oregon that are posted on the real estate website Trulia.
 
 ## Installation
 
@@ -22,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use your fancy new property listing gem type the following and then use the on screen prompts:
+
+  $ new-eugene-listings
 
 ## Development
 

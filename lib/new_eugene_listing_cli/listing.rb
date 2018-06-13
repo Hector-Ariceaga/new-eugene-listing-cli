@@ -16,7 +16,8 @@ class NewEugeneListingCli::Listing
   end
 
   def self.new_from_index_page(p)
-    self.new(p.css(".addressDetail .h6").text, p.css(".cardPrice").text, p.css("[data-auto-test='beds']").text.gsub("bd", ""), p.css("[data-auto-test='baths']").text.gsub("ba", ""))
+    self.new(p.css(".addressDetail .h6").text, p.css(".cardPrice").text, p.css("[data-auto-test='beds']").text.gsub("bd", ""),
+    p.css("[data-auto-test='baths']").text.gsub("ba", ""))
   end
 
 end

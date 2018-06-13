@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Hector Ariceaga'"]
   spec.email         = ["'hector_ariceaga@hotmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{New property listings in Eugene, Oregon.}
+  spec.description   = %q{Provides information on new property listings in Eugene, Or. posted by Trulia.}
+  spec.homepage      = "https://github.com/Hector-Ariceaga/new-eugene-listing-cli.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -24,13 +24,12 @@ Gem::Specification.new do |spec|
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = ["config/environment.rb", "lib/new_eugene_listing_cli/cli.rb", "lib/new_eugene_listing_cli/listing.rb", "lib/new_eugene_listing_cli/scraper.rb"]
   spec.bindir        = "exe"
-  spec.executables   = ["new-eugene-listings"]
-  spec.require_paths = ["lib", "lib/new-eugene-listings"]
+  spec.executables   == "new_eugene_listing_cli"
+  spec.require_paths = ["lib", "lib/new_eugene_listing_cli"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "nokogiri"
-  spec.add_development_dependency "open-uri"
   spec.add_development_dependency "pry"
 end
