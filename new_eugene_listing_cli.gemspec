@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = ["config/environment.rb", "lib/new_eugene_listing_cli/cli.rb", "lib/new_eugene_listing_cli/listing.rb", "lib/new_eugene_listing_cli/scraper.rb"]
-  spec.bindir        = "exe"
-  spec.executables   = "new-eugene-listings"
+  spec.bindir        = "bin"
+  spec.executables   << "new-eugene-listings"
   spec.require_paths = ["lib", "lib/new_eugene_listing_cli"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
