@@ -2,6 +2,5 @@
 require "bundler/setup"
 require "new_eugene_listing_cli"
 
-
 require "irb"
 IRB.start(__FILE__)
