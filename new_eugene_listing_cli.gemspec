@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'hector_ariceaga@hotmail.com'"]
 
   spec.summary       = %q{New property listings in Eugene, Oregon.}
-  spec.description   = %q{Provides information on new property listings in Eugene, Or. posted by Trulia.}
+  spec.description   = %q{Provides information on new property listings in Eugene, Or. posted on Trulia.}
   spec.homepage      = "https://github.com/Hector-Ariceaga/new-eugene-listing-cli.git"
   spec.license       = "MIT"
 

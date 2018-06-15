@@ -11,7 +11,8 @@ class NewEugeneListingCli::CLI
     puts "The following are property listings in Eugene that are less than 24 hours old:"
     @all = NewEugeneListingCli::Listing.all
     @all.each.with_index(1) do |listing, i|
-      puts "#{i}. #{listing.address.strip} -- #{listing.price} -- #{listing.bedrooms}bd -- #{listing.bathrooms}ba"
+      puts "#{i}. #{listing.address} -- #{listing.price} -- #{listing.bedrooms}bd -- #{listing.bathrooms}ba"
+      puts "    #{listing.url}"
     end
   end
 
@@ -24,12 +25,12 @@ class NewEugeneListingCli::CLI
       if input.to_i > 0
         this_listing = @all[input.to_i - 1]
         puts "ADDRESS: #{this_listing.address}"
-        puts "PRICE: $#{this_listing.price}"
+        puts "PRICE: #{this_listing.price}"
         puts "BEDROOM(S): #{this_listing.bedrooms}"
         puts "BATHROOM(S): #{this_listing.bathrooms}"
         puts "SQUARE FOOTAGE: #{this_listing.sq_feet}"
         puts "PROPERTY TYPE: #{this_listing.property_type}"
-        puts "DESCRIPTION: #{this_listing.description}"
+        puts "DESCRIPTION: #{this_listing.property_description}"
       elsif input == 'listings'
         display_listings
       else
