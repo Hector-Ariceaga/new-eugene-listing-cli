@@ -19,18 +19,23 @@ class NewEugeneListingCli::CLI
   def menu
     input = nil
     while input != "exit"
-      puts  "Please enter the number of the property you would like to see more information about or 'listings' to see the listings again or 'exit':"
+      puts "Please enter the number of the property you would like to see more information about."
+      puts "You can also type 'listings' to see the listings again or 'exit':"
       input = gets.strip.downcase
 
       if input.to_i > 0
         this_listing = @all[input.to_i - 1]
+        puts "####################################################################################################"
         puts "ADDRESS: #{this_listing.address}"
         puts "PRICE: #{this_listing.price}"
         puts "BEDROOM(S): #{this_listing.bedrooms}"
         puts "BATHROOM(S): #{this_listing.bathrooms}"
         puts "SQUARE FOOTAGE: #{this_listing.sq_feet}"
         puts "PROPERTY TYPE: #{this_listing.property_type}"
+        puts "====================================================================================================="
         puts "DESCRIPTION: #{this_listing.property_description}"
+        puts ""
+        puts ""
       elsif input == 'listings'
         display_listings
       else

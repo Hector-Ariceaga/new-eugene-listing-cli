@@ -22,7 +22,7 @@ class NewEugeneListingCli::Listing
   end
 
   def sq_feet
-    @sq_feet ||= doc.css(".miniCol12 ul li")[1].text.strip
+    @sq_feet ||= doc.css(".listInlineBulleted li")[2].text.strip
   end
 
   def property_type
