@@ -18,6 +18,7 @@ class NewEugeneListingCli::CLI
 
   def menu
     input = nil
+
     while input != "exit"
       puts "Please enter the number of the property you would like to see more information about."
       puts "You can also type 'listings' to see the listings again or 'exit':"
@@ -37,11 +38,13 @@ class NewEugeneListingCli::CLI
           puts "DESCRIPTION: #{this_listing.property_description}"
           puts ""
           puts ""
-        elsif input == 'listings'
-          display_listings
-        else
-          "I'm sorry, I don't understand. Please enter the number of the property you would like to see more information about:"
         end
+
+      elsif input == 'listings'
+        display_listings
+
+      else
+        "I'm sorry, I don't understand. Please enter the number of the property you would like to see more information about:"
       end
     end
   end
@@ -49,5 +52,4 @@ class NewEugeneListingCli::CLI
   def close
     puts "Thank you for using. Hope to see you again soon!"
   end
-
 end

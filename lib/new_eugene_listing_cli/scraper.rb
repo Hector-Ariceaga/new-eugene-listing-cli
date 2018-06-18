@@ -16,5 +16,4 @@ class NewEugeneListingCli::Scraper
   def build_properties
     scrape_properties_index.each {|p| if p != nil; NewEugeneListingCli::Listing.new_from_index_page(p) end}
   end
-
 end

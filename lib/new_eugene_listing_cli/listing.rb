@@ -34,6 +34,6 @@ class NewEugeneListingCli::Listing
   end
 
   def doc
-    @doc = Nokogiri::HTML(rpage = open(self.url, "User-Agent" => "User").read)
+    @doc ||= Nokogiri::HTML(rpage = open(self.url, "User-Agent" => "User").read)
   end
 end
