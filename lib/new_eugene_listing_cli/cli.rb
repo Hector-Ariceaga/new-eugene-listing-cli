@@ -1,10 +1,15 @@
 class NewEugeneListingCli::CLI
 
   def call
+    loading
     NewEugeneListingCli::Scraper.new.build_properties
     display_listings
     menu
     close
+  end
+
+  def loading
+    puts "Grabbing property information now. You can thank me later. Please wait..."
   end
 
   def display_listings
